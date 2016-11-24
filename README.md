@@ -6,5 +6,5 @@ Minimun Kotlin project with Gradle.
 In console,
 
 ```
-$ gradle
+$ gradle -Pmain=hello.kt
 ```
