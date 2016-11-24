@@ -19,10 +19,14 @@ dependencies {
   compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 
-mainClassName = 'HelloKt'
-
 sourceSets {
   main.java.srcDirs += './'
 }
 
 defaultTasks 'run'
+
+run {
+  if (project.hasProperty('main')) {
+    main(project.main.replace(".kt", "Kt").capitalize())
+  }
+}
